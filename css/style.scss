@@ -1,0 +1,85 @@
+/*
+Theme Name:     Mekosh2016
+Theme URI:      https://github.com/smekosh/mekosh2016
+Description:    Custom theme.
+Author:         Stephen Mekosh
+Author URI:     http://mekosh.org/
+Version:        1.0
+*/
+
+@import "reset";
+
+// Raleway font weights in use: 300, 400, 600, 700
+// https://typekit.com/fonts/raleway
+
+
+
+// colors
+$headings: #111;
+$bodytext: #333;
+
+
+
+// html font-size is roughly 15px
+html { font-size: 95%; }
+
+
+
+body {
+	background: #fcfaf7;
+	color: $bodytext;
+	font-family: "raleway", Verdana, Helvetica, Arial, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%;
+	margin: 0 2.5%;
+}
+
+h1, h2, h3, h4 { color: $headings; }
+
+h1 { 
+	font-size: 3rem;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 2.5rem;
+	font-weight: 300;
+}
+
+h3 {
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+h4 {
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+p, dl, ol, ul {
+	font-size: 1rem;
+}
+
+b, strong {
+	font-weight: 600;
+}
+
+i, em {
+	font-style: italic;
+}
+
+
+
+
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.assistive-text {
+	display: none;
+	visibility: hidden;
+}
