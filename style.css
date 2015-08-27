@@ -79,7 +79,7 @@ b, strong {
 i, em {
   font-style: italic; }
 
-.clearfix::after {
+.clearfix:after {
   clear: both;
   content: "";
   display: table; }
@@ -87,5 +87,22 @@ i, em {
 .assistive-text {
   display: none;
   visibility: hidden; }
+
+#page {
+  margin: 0 auto;
+  max-width: 1000px; }
+
+@media (min-width: 750px) {
+  #header {
+    float: left;
+    overflow: hidden;
+    position: fixed; }
+
+  #main {
+    margin-left: 25%;
+    width: 75%; }
+
+  #main .inner {
+    padding: 2em; } }
 
 /*# sourceMappingURL=style.css.map */

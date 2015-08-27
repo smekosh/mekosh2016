@@ -2,6 +2,7 @@
 
 function mekosh2016_theme_setup () {
 	
+	add_theme_support( 'post-thumbnails' ); 
 	add_theme_support( 'title-tag' );
 
 	register_nav_menu( 'navbar', __( 'Nav Bar', 'mekosh2016' ));

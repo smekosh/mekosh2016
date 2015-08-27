@@ -39,7 +39,7 @@
 
 		<header id="header" role="banner" class="clearfix">
 			
-			<div id="masthead" class="max">
+			<div id="masthead">
 				<h1 id="site-title" class="c2"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php wp_nav_menu( array( 'theme_location' => 'socialbar', 'container_class' => 'socialbar' ) ); ?>
 			</div><!-- end #masthead -->
@@ -51,16 +51,5 @@
 
 		</header><!-- end #header -->
 
-		<div id="after-header" class="max"></div>
-
-		<div id="intro-wrapper" class="max">
-			<div id="intro">
-				<?php if (is_front_page()) { ?>
-				<h2 class="site-description"><?php echo get_option('extended_description'); ?></h2>
-				<?php } /* else { ?>
-				<h2><?php echo get_the_title( get_the_ID() ); ?></h2>
-				<?php } */ ?>
-			</div>
-		</div>
-
 		<div id="main" class="max">
+			<div class="inner">

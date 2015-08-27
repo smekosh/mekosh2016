@@ -1,4 +1,5 @@
 
+			</div><!-- end .inner -->
 		</div><!-- end #main -->
 
 		<div class="push"></div>
