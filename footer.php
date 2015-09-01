@@ -6,7 +6,7 @@
 
 	</div><!-- end #page -->
 
-	<footer id="footer" role="contentinfo">
+	<footer id="footer">
 		<div id="footer-content" class="max">
 			&copy; <?php echo date('Y'); ?> Stephen Mekosh, All rights reserved. <a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
 		</div><!-- .site-info -->

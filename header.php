@@ -11,7 +11,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width" />
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<?php /* <title><?php wp_title( '|', true, 'right' ); ?></title> */ ?>
 	<?php /* <title><?php echo ( is_front_page() ? get_bloginfo('name') . ' | ' . get_bloginfo('description') : wp_title( '|', false ) ); ?></title> */ ?>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -37,19 +37,21 @@
 	
 	<div id="page">
 
-		<header id="header" role="banner" class="clearfix">
+		<header id="header" class="clearfix">
 			
 			<div id="masthead">
-				<h1 id="site-title" class="c2"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 id="site-title" class="c2"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php /*bloginfo( 'name' );*/ ?>m</a></h1>
 				<?php wp_nav_menu( array( 'theme_location' => 'socialbar', 'container_class' => 'socialbar' ) ); ?>
 			</div><!-- end #masthead -->
 
-			<nav id="navigation" role="navigation">
+			<nav id="navigation">
 				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'mekosh2015' ); ?>"><?php _e( 'Skip to content', 'mekosh2015' ); ?></a>
 				<?php wp_nav_menu( array( 'theme_location' => 'navbar', 'container_class' => 'navbar max' ) ); ?>
 			</nav><!-- end #site-navigation -->
 
 		</header><!-- end #header -->
+
+		
 
 		<div id="main" class="max">
 			<div class="inner">
