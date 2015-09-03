@@ -18,13 +18,17 @@ Version:        1.0
 $headings: #111;
 $bodytext: #333;
 
+$bright_blue: #6ab4cd;
+$lime_green:  #b1cb62;
+
 
 
 // html font-size is roughly 15px
 html { font-size: 95%; }
 
 body {
-	background: #fcfcfc;
+	//background: #fcfcfc;
+	background-color: #f8f8f8;
 	color: $bodytext;
 	font-family: "raleway", Verdana, Helvetica, Arial, sans-serif;
 	font-style: normal;
@@ -45,7 +49,7 @@ h2 {
 	font-weight: 300;
 }
 
-h3 {
+h3, #date-archive strong {
 	font-size: 1.5rem;
 	font-weight: 700;
 }
@@ -66,6 +70,14 @@ b, strong {
 
 i, em {
 	font-style: italic;
+}
+
+a {
+	color: $bright_blue;
+}
+
+a:hover, a:active {
+	color: $lime_green;
 }
 
 
@@ -144,13 +156,13 @@ i, em {
 }
 
 #date-archive > li > a {
-	background-color: #6AB4CD;
+	background-color: $bright_blue;
 	color: #fff;
 	text-decoration: none;
 }
 
 #date-archive > li > a:hover {
-	background-color: #B1CB62;
+	background-color: $lime_green;
 }
 
 
@@ -177,11 +189,13 @@ i, em {
 		width: 75%;
 	}
 
-	#main .inner {
+	// #main .inner
+	.card {
 		background: #fff;
 		border-color: #eee;
 		border-style: solid;
 		border-width: 0 1px 1px 1px;
+		margin-bottom: 3rem;
 		padding: 2rem;
 	}
 

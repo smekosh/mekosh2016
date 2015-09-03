@@ -7,17 +7,26 @@ Template Name: Archives
 <?php get_header(); ?>
 		
 		
-		<div id="c1">
-			
+		<div class="card">
 			
 			<?php include (TEMPLATEPATH . '/searchform.php'); ?>
-			
-			
+
+		</div><!-- end .card -->
+
+
+
+		<div class="card">
+
 			<h2>Archives by Month:</h2>
 			<ul id="date-archive">
 				<?php compact_archive('block', '<li>', '</li>'); ?>
 			</ul>
-			
+
+		</div><!-- end .card -->
+
+
+
+		<div class="card">
 			
 			<h2>Last 20 Posts</h2>
 			<ul>
@@ -25,33 +34,26 @@ Template Name: Archives
 			</ul>
 			
 			
-		</div><!-- end #c1 -->
+		</div><!-- end .card -->
 		
-		<div id="c2">&nbsp;</div>
 		
-		<div id="c3">
+		
+		<div class="card">
+					
+			<h2>Archives by Subject:</h2>
 			
-			<ul>
-				<li>
-					
-					<h2>Archives by Subject:</h2>
-					
-					<div class="textwidget">
-						
-						<ul id="cat-archive">
-							<?php
-							wp_list_categories('title_li=&show_count=1');
-							//wp_list_categories('show_last_updated=1&show_count=1&title_li=&feed_image=/wp-content/themes/polaroid/images/silk/feed.png');
-							?>
-						</ul>
-						
-					</div>
-					
-				</li>
+			<div class="textwidget">
 				
-			</ul>
-			
-		</div>
+				<ul id="cat-archive">
+					<?php
+					wp_list_categories('title_li=&show_count=1');
+					//wp_list_categories('show_last_updated=1&show_count=1&title_li=&feed_image=/wp-content/themes/polaroid/images/silk/feed.png');
+					?>
+				</ul>
+				
+			</div>
+
+		</div><!-- end .card -->
 		
 		
 <?php get_footer(); ?>

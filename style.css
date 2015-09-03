@@ -54,7 +54,7 @@ html {
   font-size: 95%; }
 
 body {
-  background: #fcfcfc;
+  background-color: #f8f8f8;
   color: #333;
   font-family: "raleway", Verdana, Helvetica, Arial, sans-serif;
   font-style: normal;
@@ -74,7 +74,7 @@ h2 {
   font-size: 3rem;
   font-weight: 300; }
 
-h3 {
+h3, #date-archive strong {
   font-size: 1.5rem;
   font-weight: 700; }
 
@@ -91,6 +91,12 @@ b, strong {
 
 i, em {
   font-style: italic; }
+
+a {
+  color: #6ab4cd; }
+
+a:hover, a:active {
+  color: #b1cb62; }
 
 .clearfix:after {
   clear: both;
@@ -146,12 +152,12 @@ i, em {
   color: #999; }
 
 #date-archive > li > a {
-  background-color: #6AB4CD;
+  background-color: #6ab4cd;
   color: #fff;
   text-decoration: none; }
 
 #date-archive > li > a:hover {
-  background-color: #B1CB62; }
+  background-color: #b1cb62; }
 
 @media (min-width: 750px) {
   body {
@@ -169,11 +175,12 @@ i, em {
     margin-left: 25%;
     width: 75%; }
 
-  #main .inner {
+  .card {
     background: #fff;
     border-color: #eee;
     border-style: solid;
     border-width: 0 1px 1px 1px;
+    margin-bottom: 3rem;
     padding: 2rem; } }
 @media (min-width: 900px) {
   #header {

@@ -54,4 +54,3 @@
 		
 
 		<div id="main" class="max">
-			<div class="inner">

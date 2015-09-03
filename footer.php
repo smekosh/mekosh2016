@@ -1,5 +1,4 @@
 
-			</div><!-- end .inner -->
 		</div><!-- end #main -->
 
 		<div class="push"></div>
@@ -17,8 +16,11 @@
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
 			
-			var faBefore = '<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa ';
-			var faAfter  = ' fa-stack-1x fa-inverse"></i></span>';
+			// var faBefore = '<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa ';
+			// var faAfter  = ' fa-stack-1x fa-inverse"></i></span>';
+
+			var faBefore = '<i class="fa ';
+			var faAfter  = '"></i>';
 			
 			$( '.nav-about a' ).prepend( faBefore + 'fa-user' + faAfter );
 			$( '.nav-data a' ).prepend( faBefore + 'fa-align-left fa-rotate-270' + faAfter );
