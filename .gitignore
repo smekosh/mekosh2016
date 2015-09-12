@@ -1,2 +1,3 @@
 *.map
 *.psd
+partials/metrics.php

@@ -34,23 +34,29 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php //get_template_part( 'partials/metrics' ); ?>
+
 	
 	<div id="page">
 
-		<header id="header" class="clearfix">
+		<header id="header">
 			
 			<div id="masthead">
-				<h1 id="site-title" class="c2"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php /*bloginfo( 'name' );*/ ?>m</a></h1>
-				<?php wp_nav_menu( array( 'theme_location' => 'socialbar', 'container_class' => 'socialbar' ) ); ?>
+				<h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php /*bloginfo( 'name' );*/ ?>mekosh</a></h1>
+				<div id="menu-toggle">Menu <i class="fa fa-bars"></i></div>
 			</div><!-- end #masthead -->
 
-			<nav id="navigation">
-				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'mekosh2015' ); ?>"><?php _e( 'Skip to content', 'mekosh2015' ); ?></a>
-				<?php wp_nav_menu( array( 'theme_location' => 'navbar', 'container_class' => 'navbar max' ) ); ?>
-			</nav><!-- end #site-navigation -->
+			<nav id="navigation" class="clearfix">
+				<?php wp_nav_menu( array( 'theme_location' => 'navbar', 'container_class' => 'navbar' ) ); ?>
+			</nav><!-- end #navigation -->
+
+			<div id="social">
+				<?php wp_nav_menu( array( 'theme_location' => 'socialbar', 'container_class' => 'socialbar' ) ); ?>
+			</div><!-- end #social -->
 
 		</header><!-- end #header -->
 
 		
 
-		<div id="main" class="max">
+		<div id="main">

@@ -9,7 +9,8 @@ Template Name: Archives
 		
 		<div class="card">
 			
-			<?php include (TEMPLATEPATH . '/searchform.php'); ?>
+			<h2 class="card-title"><span class="card-title-inner">Search mekosh.org</span></h2>
+			<?php get_search_form(); ?>
 
 		</div><!-- end .card -->
 
@@ -17,7 +18,7 @@ Template Name: Archives
 
 		<div class="card">
 
-			<h2>Archives by Month:</h2>
+			<h2 class="card-title"><span class="card-title-inner">Archives by Month</span></h2>
 			<ul id="date-archive">
 				<?php compact_archive('block', '<li>', '</li>'); ?>
 			</ul>
@@ -28,7 +29,7 @@ Template Name: Archives
 
 		<div class="card">
 			
-			<h2>Last 20 Posts</h2>
+			<h2 class="card-title"><span class="card-title-inner">Last 20 Posts</span></h2>
 			<ul>
 				<?php wp_get_archives('type=postbypost&limit=20&format=html'); ?> 
 			</ul>
@@ -40,7 +41,7 @@ Template Name: Archives
 		
 		<div class="card">
 					
-			<h2>Archives by Subject:</h2>
+			<h2 class="card-title"><span class="card-title-inner">Archives by Subject</span></h2>
 			
 			<div class="textwidget">
 				

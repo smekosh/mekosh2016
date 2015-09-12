@@ -18,8 +18,27 @@ Version:        1.0
 $headings: #111;
 $bodytext: #333;
 
+$white:    #fff;
+
 $bright_blue: #6ab4cd;
+$darker_blue: #5692a6;
 $lime_green:  #b1cb62;
+
+
+// http://www.colourlovers.com/palette/131576/Maddening_Caravan
+$gold: #FAD089;
+$orange: #FF9C5B;
+$red_orange: #F5634A;
+
+$red_orange_dark: #cc533d;
+
+$red: #ED303C;
+$teal: #3B8183;
+
+
+
+
+$base: 1.15rem;
 
 
 
@@ -27,17 +46,23 @@ $lime_green:  #b1cb62;
 html { font-size: 95%; }
 
 body {
-	//background: #fcfcfc;
+	// background: #fcfcfc;
 	background-color: #f8f8f8;
+	// border-top: 1rem solid $darker_blue;
+	border-top: 1rem solid $red_orange_dark;
 	color: $bodytext;
 	font-family: "raleway", Verdana, Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 150%;
-	margin: 0 2.5%;
+	padding: 0 1rem;
+	margin: 0;
 }
 
-h1, h2, h3, h4 { color: $headings; line-height: 100%; }
+h1, h2, h3, h4 { 
+	color: $headings;
+	line-height: 100%;
+}
 
 h1 { 
 	font-size: 4rem;
@@ -47,41 +72,54 @@ h1 {
 h2 {
 	font-size: 3rem;
 	font-weight: 300;
+	margin-bottom: 2rem;
 }
 
-h3, #date-archive strong {
+h3, 
+#date-archive strong {
 	font-size: 1.5rem;
 	font-weight: 700;
 }
 
 h4 {
-	font-size: 1.15rem;
+	font-size: $base;
 	font-weight: 700;
 }
 
 p, dl, ol, ul {
-	font-size: 1.15rem;
-	margin-bottom: 1.15rem;
+	font-size: $base;
+	margin-bottom: $base;
 }
 
-b, strong {
-	font-weight: 600;
-}
+ol { list-style: decimal outside; margin-left: 1.75rem; }
 
-i, em {
-	font-style: italic;
+ul { list-style: circle outside;  margin-left: $base; }
+
+li { margin-bottom: .5rem; }
+
+b, strong { font-weight: 600; }
+
+i, em { font-style: italic; }
+
+img {
+	max-width: 100%;
 }
 
 a {
-	color: $bright_blue;
+	color: $teal;// $bright_blue;
 }
 
 a:hover, a:active {
-	color: $lime_green;
+	color: $red_orange; // $lime_green;
+	transition: background-color 1s, border-color 1s, color 1s;
 }
 
 
 
+h1#site-title a {
+	color: $white;
+	text-decoration: none;
+}
 
 
 .clearfix:after {
@@ -90,10 +128,149 @@ a:hover, a:active {
 	display: table;
 }
 
+/*
 .assistive-text {
 	display: none;
 	visibility: hidden;
 }
+*/
+
+#header { 
+	// background-color: $bright_blue;
+	background-color: $red_orange;
+	// border-top: 1rem solid $darker_blue;
+	border-top: 1rem solid $red_orange_dark;
+	margin: auto -1rem;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+#masthead {
+	background: transparent url(img/h1-bg-warm.png) 0 1rem no-repeat;
+	margin-top: -1rem;
+}
+
+h1#site-title {
+	font-size: 2.5rem;
+	line-height: 100%;
+	margin: 0;
+	padding: .2rem 0 .2rem 1rem;
+	width: 60%;
+}
+
+#menu-toggle {
+	color: $white;
+	cursor: pointer;
+	font-weight: 600;
+	letter-spacing: .025rem;
+	position: absolute;
+	top: -.2rem;
+	right: 1rem;
+	text-transform: uppercase;
+}
+
+#navigation, #social { display: none; }
+.navbar, .socialbar { xxxxpadding: 0 1rem; }
+
+
+#social { background-color: $red_orange_dark; margin-top: .6rem; }
+
+
+.menu {
+	list-style: none;
+	margin: 0;
+}
+
+.menu li {
+	margin: 0;
+	padding: 0;
+}
+
+.menu a {
+	color: $white;
+	font-size: .9rem;
+	font-weight: 600;
+	letter-spacing: .045rem;
+	line-height: 100%;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#menu-main-nav li {
+	float: left;
+	width: 50%;
+}
+
+#menu-main-nav {
+	xxxxborder-top: .4rem solid #f8f8f8;
+}
+
+#menu-main-nav a {
+	display: block;
+	line-height: 150%;
+	padding: .6rem 1rem;
+}
+
+.menu a:hover,
+.menu a:active {
+	background-color: $red_orange_dark;
+	transition: background-color 1s;
+
+}
+
+
+// .menu li { border-bottom: 1px solid #e7e7e7; }
+// .menu li:last-child { border-bottom: none; }
+
+// .menu a {
+// 	display: inline-block;
+// 	font-size: .9rem;
+// 	font-weight: 600;
+// 	line-height: 100%;
+// 	padding: .9rem .6rem;
+// 	text-decoration: none;
+// 	text-transform: uppercase;
+// }
+
+// .menu a i.fa {
+// 	display: inline-block;
+// 	width: 1.75rem;
+// }
+#menu-main-nav a .fa {
+	color: #f8f8f8;
+	display: inline-block;
+	width: 2rem;
+}
+
+#menu-social-networks {
+	xxxxborder-top: .4rem solid #f8f8f8;
+	padding: 0 .4rem;
+}
+
+#menu-social-networks li {
+	display: inline-block;
+}
+
+#menu-social-networks li a {
+	display: block;
+	padding: .6rem;
+}
+
+
+// .menu .description {
+// 	color: #999;
+// 	display: block;
+// 	font-size: .8rem;
+// 	font-weight: 400;
+// 	line-height: 125%;
+// 	margin-left: 1.5rem;
+// 	text-transform: none;
+// }
+
+
 
 
 
@@ -104,8 +281,12 @@ a:hover, a:active {
 	position: relative;
 }
 
+#main {
+	margin-top: 3rem;
+}
 
-.inner img {
+/*
+.card img {
 	height: auto;
 	margin-left: -2rem;
 	// max-width: 100%;
@@ -139,14 +320,15 @@ a:hover, a:active {
 	width: 100%;
 }
 
+// #date-archive > li strong,
 #date-archive > li > span, 
 #date-archive > li > a {
+	border-radius: 2px;
 	display: block;
 	float: left;
 	margin: 0.25rem;
 	padding: 0.5rem 0.25rem;
 	text-align: center;
-	// width: calc(16.6667% - 1rem);
 	width: calc(16.66666666% - .5rem);
 }
 
@@ -157,13 +339,92 @@ a:hover, a:active {
 
 #date-archive > li > a {
 	background-color: $bright_blue;
-	color: #fff;
+	color: $white;
 	text-decoration: none;
 }
 
 #date-archive > li > a:hover {
 	background-color: $lime_green;
 }
+
+
+.card {
+	background: $white;
+	border-color: #eee;
+	border-style: solid;
+	border-width: 1px 0;
+	margin-bottom: 3rem;
+	padding: 1rem 0;
+}
+
+.card-footer {
+	background: #eee none repeat scroll 0 0;
+	margin: 0 -2rem -2rem;
+	padding: 1rem 2rem;
+}
+*/
+
+
+.card h2 {
+	margin-left: -2rem;
+}
+
+.card h2 a {
+	overflow: auto;
+	text-decoration: none;
+}
+
+.card h2 .card-title-inner {
+	border-bottom: 1rem solid #ddd;
+	display: inline-block;
+	padding-left: 2rem;
+}
+
+.card h2 a .card-title-inner { border-bottom: 1rem solid $teal; }
+
+.card h2 a:hover .card-title-inner,
+.card h2 a:active .card-title-inner {
+	border-bottom-color: $red_orange_dark;
+	transition: border-color 1s;
+}
+
+
+.card figure.aligncenter {
+	margin: 0 -2rem $base -2rem;
+	width: calc(100% + 4rem) !important;
+}
+
+.card figure.aligncenter img {
+	height: auto !important;
+	width: 100% !important;
+}
+
+.card .wp-caption-text {
+	color: #999;
+	font-size: .8rem;
+	line-height: 125%;
+	margin: 0 2rem;
+	text-transform: uppercase;
+}
+
+.card p img.aligncenter,
+.card p img.size-full {
+	height: auto !important;
+	margin: auto -2rem;
+	max-width: calc(100% + 4rem);
+	width: calc(100% + 4rem) !important;
+}
+
+
+
+// style for realllly old post images
+.boxed {
+	float: right;
+	margin: .25rem -2rem .5rem 1rem;
+}
+
+
+
 
 
 
@@ -176,28 +437,59 @@ a:hover, a:active {
 
 	#header {
 		float: left;
-		overflow: hidden;
-		position: fixed;
-		top: 0px;
-		//background-color: orange;
-		max-width: calc(187px - 2rem);
-		width: calc(187px - 2rem); // 25% of 750px = 187.5
+		margin: 0;
+		max-width: calc(187px - 1rem);
+		width: calc(187px - 1rem); // 25% of 750px = 187.5
 	}
 
-	#main {
+	h1#site-title { 
+		padding-bottom: 2rem; 
+		width: 100%;
+	}
+
+	#navigation, #social { display: block; }
+	#menu-toggle { display: none !important; visibility: hidden !important; }
+
+	#menu-main-nav li {
+		float: none;
+		width: 100%;
+	}
+
+
+	#main,
+	#footer {
+		margin-top: 0;
 		margin-left: 25%;
 		width: 75%;
 	}
 
-	// #main .inner
 	.card {
-		background: #fff;
+		background: $white;
 		border-color: #eee;
 		border-style: solid;
-		border-width: 0 1px 1px 1px;
+		border-width: 1px;
 		margin-bottom: 3rem;
 		padding: 2rem;
 	}
+	
+	.card-footer {
+		background: #f0f0f0 none repeat scroll 0 0;
+		color: #666;
+		margin: 2rem -2rem -2rem -2rem;
+		padding: 1rem 2rem;
+	}
+
+	#footer {
+		padding: 0 2rem 2rem 2rem;
+	}
+
+	/*
+	.card-footer a {
+		color: #666;
+		text-decoration: none;
+		border-bottom: 1px #ccc solid;
+	}
+	*/
 
 }
 
@@ -206,10 +498,15 @@ a:hover, a:active {
 @media (min-width: 900px) {
 
 	#header {
-		max-width: calc(225px - 2rem);
-		width: calc(225px - 2rem);
+		max-width: calc(225px - 1rem);
+		width: calc(225px - 1rem);
 	}
 
+	h1#site-title {
+		font-size: 3.125rem;
+		padding-top: 0;
+	}
+	
 }
 
 
@@ -217,8 +514,17 @@ a:hover, a:active {
 @media (min-width: 1000px) {
 
 	#header {
-		max-width: calc(250px - 2rem);
-		width: calc(250px - 2rem);
+		max-width: calc(250px - 1rem);
+		width: calc(250px - 1rem);
 	}
 
+	#masthead {
+		background-position: 0 1.1rem;
+		margin-top: -1.1rem;
+	}
+
+	h1#site-title {
+		font-size: 3.575rem;
+	}
+	
 }
