@@ -55,8 +55,8 @@ html {
 
 body {
   background-color: #f8f8f8;
-  border-top: 1rem solid #cc533d;
-  color: #333;
+  border-top: 1rem solid #689F38;
+  color: #212121;
   font-family: "raleway", Verdana, Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -65,7 +65,7 @@ body {
   margin: 0; }
 
 h1, h2, h3, h4 {
-  color: #111;
+  color: #212121;
   line-height: 100%; }
 
 h1 {
@@ -111,10 +111,10 @@ img {
   max-width: 100%; }
 
 a {
-  color: #3B8183; }
+  color: #8BC34A; }
 
 a:hover, a:active {
-  color: #F5634A;
+  color: #607D8B;
   transition: background-color 1s, border-color 1s, color 1s; }
 
 h1#site-title a {
@@ -133,8 +133,8 @@ h1#site-title a {
 }
 */
 #header {
-  background-color: #F5634A;
-  border-top: 1rem solid #cc533d;
+  background-color: #8BC34A;
+  border-top: 1rem solid #689F38;
   margin: auto -1rem;
   padding: 0;
   position: fixed;
@@ -143,7 +143,7 @@ h1#site-title a {
   z-index: 100; }
 
 #masthead {
-  background: transparent url(img/h1-bg-warm.png) 0 1rem no-repeat;
+  background: transparent url(img/h1-bg.png) 0 1rem no-repeat;
   margin-top: -1rem; }
 
 h1#site-title {
@@ -170,7 +170,7 @@ h1#site-title {
   xxxxpadding: 0 1rem; }
 
 #social {
-  background-color: #cc533d;
+  background-color: #689F38;
   margin-top: .6rem; }
 
 .menu {
@@ -204,7 +204,7 @@ h1#site-title {
 
 .menu a:hover,
 .menu a:active {
-  background-color: #cc533d;
+  background-color: #607D8B;
   transition: background-color 1s; }
 
 #menu-main-nav a .fa {
@@ -322,12 +322,29 @@ h1#site-title {
   padding-left: 2rem; }
 
 .card h2 a .card-title-inner {
-  border-bottom: 1rem solid #3B8183; }
+  border-bottom: 1rem solid #8BC34A; }
 
 .card h2 a:hover .card-title-inner,
 .card h2 a:active .card-title-inner {
-  border-bottom-color: #cc533d;
+  border-bottom-color: #689F38;
   transition: border-color 1s; }
+
+h2.page-title {
+  background-color: #607D8B;
+  color: #DCEDC8;
+  margin: -2rem -2rem 2rem -2rem;
+  border-bottom: .5rem solid #4f6773; }
+
+h2.page-title .card-title-inner {
+  border-bottom: 0;
+  padding-top: 6rem;
+  padding-bottom: 2rem; }
+
+header.card {
+  padding-bottom: 0; }
+
+header.card h2.page-title {
+  margin-bottom: 0; }
 
 .card figure.aligncenter {
   margin: 0 -2rem 1.15rem -2rem;

@@ -7,6 +7,9 @@ Template Name: Archives
 <?php get_header(); ?>
 		
 		
+		<header class="card"><h2 class="page-title"><span class="card-title-inner"><?php the_title(); ?></span></h2></header>
+
+
 		<div class="card">
 			
 			<h2 class="card-title"><span class="card-title-inner">Search mekosh.org</span></h2>
