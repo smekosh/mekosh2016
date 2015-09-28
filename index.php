@@ -5,11 +5,16 @@ get_header();
 if ( have_posts() ) {
 ?>
 
-<?php if ( is_category() ) { ?>
-	<header class="card"><h2 class="page-title"><span class="card-title-inner"><?php single_cat_title(); ?></span></h2></header>
-<?php } /* elseif () { ?>
-	<header class="card"><h2 class="page-title"><span class="card-title-inner"><?php post_type_archive_title(); ?></span></h2></header>
-} */ ?>
+<?php if ( is_archive() || is_home() ) { ?>
+	<header class="card"><h2 class="page-title"><span class="card-title-inner"><?php 
+		if ( is_archive() ) {
+			the_archive_title();
+			//single_cat_title();
+		} elseif ( is_home() ) {
+			single_post_title();
+		}
+	?></span></h2></header>
+<?php } ?>
 
 
 <?php while ( have_posts() ) : the_post(); ?>
@@ -34,9 +39,13 @@ if ( have_posts() ) {
 	
 	<?php if ( !is_page() ) { ?>
 	<footer class="card-footer">
-		<meta itemprop="datePublished" content="<?php echo get_the_date( 'c' ); ?>" />
-		<time class="pub-date" datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"><i class="fa fa-calendar" title="Published on"></i> <?php echo get_the_date(); ?></time>
-		<i class="fa fa-tag"></i> <?php the_category( ', ' ); ?>
+		<div class="card-footer-item">
+			<meta itemprop="datePublished" content="<?php echo get_the_date( 'c' ); ?>" />
+			<time class="pub-date" datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"><i class="fa fa-lg fa-calendar" title="Published on"></i> <?php if ( !is_single() ) { ?><a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title_attribute(); ?>"><?php } ?><?php echo get_the_date(); ?><?php if ( !is_single() ) { ?></a><?php } ?></time>
+		</div>
+		<div class="card-footer-item">
+			<i class="fa fa-lg fa-tag"></i> <?php the_category( ', ' ); ?>
+		</div>
 	</footer>
 	<?php } ?>
 

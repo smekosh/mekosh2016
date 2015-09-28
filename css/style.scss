@@ -47,7 +47,7 @@ $base: 1.15rem;
 html { font-size: 95%; }
 
 body {
-	background-color: #f8f8f8;
+	background-color: $white;
 	border-top: 1rem solid $primary-color-dark;
 	color: $primary-text-color;
 	font-family: "raleway", Verdana, Helvetica, Arial, sans-serif;
@@ -220,12 +220,18 @@ h1#site-title {
 	padding: .6rem 1rem;
 }
 
+.menu li.current_page_parent a,
+.menu li.current-menu-item a {
+	background-color: $accent-color;
+}
+
 .menu a:hover,
 .menu a:active {
 	background-color: $accent-color;
 	transition: background-color 1s;
-
 }
+
+
 
 
 // .menu li { border-bottom: 1px solid #e7e7e7; }
@@ -247,8 +253,8 @@ h1#site-title {
 // }
 #menu-main-nav a .fa {
 	color: #f8f8f8;
-	display: inline-block;
-	width: 2rem;
+	xxxxdisplay: inline-block;
+	xxxxwidth: 2rem;
 }
 
 #menu-social-networks {
@@ -382,8 +388,11 @@ h1#site-title {
 .card-footer {
 	background: #f0f0f0 none repeat scroll 0 0;
 	color: #666;
+	font-size: .85em;
+	letter-spacing: .05em;
 	margin: 1rem -1rem -1rem -1rem;
 	padding: 1rem;
+	text-transform: uppercase;
 }
 
 
@@ -417,7 +426,7 @@ h1#site-title {
 h2.page-title {
 	background-color: $accent-color;
 	color: $primary-color-light;
-	margin: -2rem -2rem 1rem -2rem;
+	margin: -2rem -1rem 1rem -1rem;
 	border-bottom: .5rem solid #4f6773;
 }
 
@@ -425,6 +434,7 @@ h2.page-title .card-title-inner {
 	border-bottom: 0;
 	padding-top: 4rem;
 	padding-bottom: 1rem;
+	padding-left: 1rem;
 }
 
 
@@ -493,6 +503,28 @@ header.card h2.page-title {
 	text-decoration: none;
 }
 
+.card-content .wp-caption a, 
+.card-content .aligncenter a {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.card-content .wp-caption a:hover, 
+.card-content .wp-caption a:active,
+.card-footer  .wp-caption a:hover, 
+.card-footer  .wp-caption a:active {
+	border-radius: 0;
+}
+
+
+.card-footer-item {
+	margin-bottom: .5rem;
+}
+
+.card-footer-item:last-child {
+	margin-bottom: 0;
+}
+
 
 
 // style for realllly old post images
@@ -511,7 +543,7 @@ header.card h2.page-title {
 
 @media (min-width: 750px) {
 
-	body { margin: 0; }
+	body { background-color: #f8f8f8; margin: 0; }
 
 	#header {
 		float: left;
@@ -553,8 +585,13 @@ header.card h2.page-title {
 		padding: 1rem 2rem;
 	}
 
-	h2.page-title { margin-bottom: 2rem; }
-	h2.page-title .card-title-inner { padding-top: 6rem; padding-bottom: 1.5rem; }
+	.card-footer-item {
+		display: inline-block;
+		margin-bottom: 0;
+	}
+
+	h2.page-title { margin: -2rem -2rem 1rem -2rem; }
+	h2.page-title .card-title-inner { padding-top: 6rem; padding-bottom: 1.5rem; padding-left: 2rem; }
 
 	.card blockquote {
 		border-left: 1rem solid $divider-color;

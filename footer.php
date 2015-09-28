@@ -31,7 +31,7 @@
 
 			// add Font Awesome icon before text label
 			$( '#menu-main-nav li' ).each(function(index) {
-				$(this).find('a').prepend( '<i class="fa fa-lg fa-' + $(this).attr('class').split(' ')[0] + '"></i>' );
+				$(this).find('a').prepend( '<i class="fa fa-lg fa-fw fa-' + $(this).attr('class').split(' ')[0] + '"></i> ' );
 			});
 
 			// replace text label with Font Awesome icon
